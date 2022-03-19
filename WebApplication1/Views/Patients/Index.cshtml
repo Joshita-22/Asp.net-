@@ -1,0 +1,23 @@
+﻿@model IEnumerable<WebApplication1.Models.Patient>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<table class="table table-striped">
+    <tr>
+        <th>@Html.DisplayNameFor(x => x.name)</th>
+        <th>@Html.DisplayNameFor(x => x.temp)</th>
+        <th>@Html.DisplayNameFor(x => x.allergies)</th>
+
+    </tr>
+    @foreach (var item in Model)
+            {
+                 <tr>
+                    <td>@Html.DisplayFor(x => item.name)</td>
+                    <td>@Html.DisplayFor(x => item.temp)</td>
+                    <td>@Html.DisplayFor(x => item.allergies)</td>
+                 </tr>
+            }
+</table>
+
