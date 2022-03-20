@@ -4,6 +4,7 @@
 }
 
 <h2>Index</h2>
+<h1>@Html.ActionLink("Create", "Create","PatientsController", new { @class = "btn btn-success" }) </h1>
 <table class="table table-striped">
     <tr>
         <th>@Html.DisplayNameFor(x => x.name)</th>
@@ -13,11 +14,13 @@
     </tr>
     @foreach (var item in Model)
             {
-                 <tr>
-                    <td>@Html.DisplayFor(x => item.name)</td>
-                    <td>@Html.DisplayFor(x => item.temp)</td>
-                    <td>@Html.DisplayFor(x => item.allergies)</td>
-                 </tr>
+<tr>
+    <td>@Html.DisplayFor(x => item.name)</td>
+    <td>@Html.DisplayFor(x => item.temp)</td>
+    <td>@Html.DisplayFor(x => item.allergies)</td>
+    <td>@Html.ActionLink("Details", "Details", new { @id = item.id }, new { @class = "btn btn-success" })</td>
+    <td>@Html.ActionLink("Delete", "Delete", new { @id = item.id }, new { @class = "btn btn-danger" })</td>
+</tr>
             }
 </table>
 
