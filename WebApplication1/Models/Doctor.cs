@@ -27,6 +27,7 @@ namespace WebApplication1.Models
         [ForeignKey("doc")]
         public int docId  { get; set; }
         public Doctor doc { get; set; }
+        public string ptemail { get; set; }
 
 
     }

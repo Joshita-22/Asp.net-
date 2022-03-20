@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AppointmentController.cs" />
     <Compile Include="Controllers\DoctorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -194,6 +195,10 @@
     <Compile Include="Migrations\202203190914400_second3.cs" />
     <Compile Include="Migrations\202203190914400_second3.Designer.cs">
       <DependentUpon>202203190914400_second3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203200619287_third.cs" />
+    <Compile Include="Migrations\202203200619287_third.Designer.cs">
+      <DependentUpon>202203200619287_third.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -270,6 +275,8 @@
     <Content Include="Views\Patients\Edit.cshtml" />
     <Content Include="Views\Patients\Details.cshtml" />
     <Content Include="Views\Patients\Delete.cshtml" />
+    <Content Include="Views\Appointment\Create.cshtml" />
+    <Content Include="Views\Appointment\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -302,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202203190914400_second3.resx">
       <DependentUpon>202203190914400_second3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203200619287_third.resx">
+      <DependentUpon>202203200619287_third.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
