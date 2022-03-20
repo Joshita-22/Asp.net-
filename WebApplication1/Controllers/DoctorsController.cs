@@ -26,6 +26,7 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public ActionResult Create(Doctor dc)
         {
+
             if (ModelState.IsValid)
             {
                 hc1.doctor.Add(dc);

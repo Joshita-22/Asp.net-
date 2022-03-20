@@ -13,6 +13,7 @@ namespace WebApplication1.Models
         [Display(Name = "NAME")]
         public string name { get; set; }
         public string speciality { get; set; }
+        
 
     }
 
