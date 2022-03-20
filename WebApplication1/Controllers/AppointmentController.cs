@@ -7,8 +7,10 @@ using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
+    [Authorize]
     public class AppointmentController : Controller
     {
+        
         HospitalContext hc1 = new HospitalContext();
         // GET: Appointment
         public ActionResult Index()
@@ -28,7 +30,8 @@ namespace WebApplication1.Controllers
         {
             if(ModelState.IsValid)
             {
-                apt.ptemail = "joshita@gmail.com";
+                //apt.ptemail = "joshita@gmail.com";
+                apt.ptemail = HttpContext.User.Identity.Name;
                 hc1.apt.Add(apt);
                 hc1.SaveChanges();
                 return RedirectToAction("Index");
